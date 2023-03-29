@@ -32,3 +32,37 @@
     background-color: #0057D1;
   }
   
+
+  .EditMode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 2px;
+  }
+  
+  .EditMode input[type="text"] {
+    
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .EditMode button {
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .EditMode button:first-of-type {
+    background-color: green;
+    color: #fff;
+  }
+  
+  .EditMode button:last-of-type {
+    background-color: red;
+    color: #fff;
+  }
+  

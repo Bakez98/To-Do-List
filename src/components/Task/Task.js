@@ -33,7 +33,7 @@ const dispatch = useDispatch()
       
      {
        editMode ? (
-         <div>
+         <div className={styles.EditMode}>
         <input type="text" onChange={(e) => setNewName(e.target.value)} defaultValue={task.name}/>
         <button onClick={() => HandleEdit(task)}>Save</button>
         <button onClick={() => setEditMode(!editMode)}>Cancel</button>
