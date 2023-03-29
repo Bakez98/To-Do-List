@@ -13,6 +13,7 @@ const AddTask = () => {
     if(taskName)
     {
     dispatch(addTask(taskName))
+    setTaskName("")
   }else
   {
     alert("Please Enter Task Name")
