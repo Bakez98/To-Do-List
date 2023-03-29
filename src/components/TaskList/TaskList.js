@@ -6,9 +6,8 @@ import { useSelector } from 'react-redux'
 
 const TaskList = () => {
 
-  const {tasks} = useSelector(state => state)
-
-
+  const {tasks} = useSelector(state => state.taskReducer)
+  
   return (
   <div>
     <ol>

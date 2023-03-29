@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import taskReducer from "./taskReducer";
 import {persistStore, persistReducer} from "redux-persist"
@@ -9,7 +9,9 @@ const persistConfig = {
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, taskReducer)
+const allReducers = combineReducers({taskReducer})
+
+const persistedReducer = persistReducer(persistConfig, allReducers)
 const store = createStore(persistedReducer, {},applyMiddleware(thunk));
 export const persistor = persistStore(store);
 export default store;
