@@ -10,7 +10,7 @@ switch (action.type) {
     case TASK_CONSTANTS.ADD_TASK:
         return{
             ...state,
-            tasks : [...state.tasks , {name : action.payload, done: false , id: crypto.randomUUID}]
+            tasks : [...state.tasks , {name : action.payload, done: false , id: crypto.randomUUID() } ]
         };   
 
     case TASK_CONSTANTS.DELETE_TASK:
@@ -29,7 +29,7 @@ switch (action.type) {
         return {
             ...state,
             tasks: state.tasks?.map((task) => (
-                task.id === action.payload.task.id ? {...action.payload.task ,name:action.payload.newName } : task
+                task.id === action.payload.task.id ? {...task ,name : action.payload.newName } : task
             ))
         }
         

@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux'
 const TaskList = () => {
 
   const {tasks} = useSelector(state => state.taskReducer)
-  
   return (
   <div>
     <ol>
-      {tasks?.map((task, index) => (
-        <Task task={task} key={index}/>
+      {tasks?.map((task) => (
+        
+        <Task task={task} key={task.id}/>
       ))}
       </ol>
       </div>
