@@ -22,7 +22,7 @@ const AddTask = () => {
 
   return (
     <div className={styles.wrapper}>
-      <input type="text" placeholder='Enter Your Task..' onChange={(e) => setTaskName(e.target.value)}/>
+      <input type="text" placeholder='Enter Your Task..' value={taskName} onChange={(e) => setTaskName(e.target.value)}/>
       <button onClick={() =>handleAddTask(taskName)}>Add Task</button>
     </div>
   )
